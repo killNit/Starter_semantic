@@ -1,8 +1,6 @@
 # Starter Proj
 
-## Steps to setup
-
-What steps do you think we need to do and order is important when is needed
+## Steps to setup and run
 
 1. `git clone git@github.com:jimibue/react-rails-router-starter-f20.git <project-name>`
 
