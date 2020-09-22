@@ -1,2 +1,0 @@
-class ThingsController < ApplicationController
-end
