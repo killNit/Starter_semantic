@@ -18,7 +18,7 @@ gem "puma", "~> 4.1"
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
-
+gem 'cloudinary'
 gem "faker", :git => "https://github.com/faker-ruby/faker.git", :branch => "master"
 
 # Reduces boot times through caching; required in config/boot.rb
@@ -26,6 +26,7 @@ gem "bootsnap", ">= 1.4.2", require: false
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem 'rack-cors'
+gem "devise_token_auth"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -33,6 +34,8 @@ group :development, :test do
   gem "better_errors"
   gem "binding_of_caller"
   gem "pry-rails"
+  gem 'pry'
+  gem 'dotenv-rails'
 end
 
 group :development do

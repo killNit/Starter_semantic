@@ -3736,6 +3736,13 @@ detect-port-alt@1.1.6:
     address "^1.0.1"
     debug "^2.6.0"
 
+devise-axios@^1.0.24:
+  version "1.0.24"
+  resolved "https://registry.yarnpkg.com/devise-axios/-/devise-axios-1.0.24.tgz#c591da71b16778cc84040db4bfd82534b2c61c19"
+  integrity sha512-IgSQxWxDprWrZwYihqmeRpZffHRXifuTC4HCI98AzJWslUKoH5xK2LireBhnt4CqSFGXxfH4KfJdQ0vvEwS6kg==
+  dependencies:
+    "@babel/runtime" "^7.0.0"
+
 diff-sequences@^24.9.0:
   version "24.9.0"
   resolved "https://registry.yarnpkg.com/diff-sequences/-/diff-sequences-24.9.0.tgz#5715d6244e2aa65f48bba0bc972db0b0b11e95b5"

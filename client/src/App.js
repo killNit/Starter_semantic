@@ -4,17 +4,30 @@ import Home from "./components/Home";
 import NavBar from "./components/Navbar";
 import ThingsDemo from "./things/ThingsDemo";
 import { Container } from "semantic-ui-react";
+import Login from "./components/Login";
+import Register from "./components/Register";
+import { initMiddleware } from "devise-axios";
+import NoMatch from "./components/NoMatch";
+import FetchUser from "./components/FetchUser";
+import ProtectedRoute from "./components/ProtectedRoute";
+
+initMiddleware();
 
 function App() {
   return (
     <>
       <NavBar />
-      <Container>
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/thingsDemo" component={ThingsDemo} />
-        </Switch>
-      </Container>
+      <FetchUser>
+        <Container>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/login" component={Login} />
+            <Route exact path="/register" component={Register} />
+            <ProtectedRoute exact path="/thingsDemo" component={ThingsDemo} />
+            <Route component={NoMatch} />
+          </Switch>
+        </Container>
+      </FetchUser>
     </>
   );
 }

@@ -1,13 +1,44 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useContext } from "react";
+import { Link, useHistory } from "react-router-dom";
+import { AuthContext } from '../providers/AuthProvider';
 
-// For Basic setup only please change
+
 const NavBar = () => {
+ 
+    const history = useHistory();
+    const { user, handleLogout } = useContext(AuthContext);
+
+    const getRightNav = () => {
+      if (user) {
+        return (
+          <>
+          <div
+            onClick={() => handleLogout(history)}
+            style={{ color: "red" }}
+            >
+              LOG-OUT
+          </div>
+        </>
+        );
+      } else {
+        return (
+          <>
+            <Link to="/register">REGISTER</Link>
+            <span style={{ marginRight: '10px'}}></span>
+            <Link to="/login">LOG-IN</Link>
+          </>
+        );
+      }
+    };
+
   return (
     <div style={styles.navbar}>
+      <div>
       <Link to="/">Home</Link>
       <span style={{ marginRight: "10px" }}></span>
-      <Link to="/thingsDemo">Things</Link>
+      {user && <Link to="/thingsDemo">Things</Link>}
+    </div>
+    <div>{getRightNav()}</div>
     </div>
   );
 };
