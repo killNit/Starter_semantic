@@ -6,12 +6,9 @@ import ThingsDemo from "./things/ThingsDemo";
 import { Container } from "semantic-ui-react";
 import Login from "./components/Login";
 import Register from "./components/Register";
-import { initMiddleware } from "devise-axios";
 import NoMatch from "./components/NoMatch";
 import FetchUser from "./components/FetchUser";
 import ProtectedRoute from "./components/ProtectedRoute";
-
-initMiddleware();
 
 function App() {
   return (
